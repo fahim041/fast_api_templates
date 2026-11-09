@@ -1,0 +1,24 @@
+[project]
+name = "jwt-auth"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "fahim041", email = "fahimalsafi@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard]>=0.162.2",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+]
+
+[project.scripts]
+jwt-auth = "in_memory:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+
